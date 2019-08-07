@@ -366,7 +366,6 @@ function RichTextWrapper( {
 			onEnter={ onEnter }
 			onDelete={ onDelete }
 			onPaste={ onPaste }
-			__unstableIsSelected={ originalIsSelected }
 			__unstableInputRule={ inputRule }
 			__unstableMultilineTag={ multilineTag }
 			__unstableIsCaretWithinFormattedText={ isCaretWithinFormattedText }

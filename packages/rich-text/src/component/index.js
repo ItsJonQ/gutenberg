@@ -742,7 +742,6 @@ class RichText extends Component {
 			selectionStart,
 			selectionEnd,
 			placeholder,
-			__unstableIsSelected: isSelected,
 		} = this.props;
 
 		// Check if the content changed.
@@ -754,7 +753,7 @@ class RichText extends Component {
 
 		// Check if the selection changed.
 		shouldReapply = shouldReapply || (
-			isSelected && ! prevProps.isSelected && (
+			selectionStart && ! prevProps.selectionStart && (
 				this.record.start !== selectionStart ||
 				this.record.end !== selectionEnd
 			)
@@ -920,11 +919,12 @@ class RichText extends Component {
 
 	render() {
 		const {
-			__unstableIsSelected: isSelected,
+			selectionStart,
 			children,
 			allowedFormats,
 			withoutInteractiveFormatting,
 		} = this.props;
+		const isSelected = selectionStart !== undefined;
 
 		return (
 			<>
