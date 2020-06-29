@@ -20,6 +20,8 @@ import ColorIndicator from '../color-indicator';
 import RangeControl from '../range-control';
 import Text from '../text';
 
+// TODO: Experimental
+
 function ContextPopover( { children, trigger, title } ) {
 	const popover = usePopoverState( {
 		animated: 200,
